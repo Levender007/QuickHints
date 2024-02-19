@@ -1,0 +1,7 @@
+{
+  "dataset": "./datasets/train.csv",
+  "hashFile": "./savefiles/trieHashFile.txt",
+  "minHarTovRelevance": 2.8,
+  "minRelevance": 2.0,
+  "triePath": "./savefiles/trieSave"
+}
