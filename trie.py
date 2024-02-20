@@ -80,8 +80,8 @@ class PrefTrie:
             with open(self.conf['hashFile'], 'r') as file:
                 self.conf['savefileHash'] = file.read()
         except Exception:
-            x = input("Нет доступа к hash-файлу. Загрузить дерево без проверки hash-суммы? (Y/N)\t")
-            if x == 'Y':
+            x = input("Нет доступа к hash-файлу. Загрузить дерево без проверки hash-суммы? (Y/N)\t").lower()
+            if x == 'y':
                 self.trie = datrie.Trie.load(self.conf['triePath'])
                 self.trieStatus = 1
                 return
@@ -92,8 +92,8 @@ class PrefTrie:
             self.trie = datrie.Trie.load(self.conf['triePath'])
             self.trieStatus = 1
         else:
-            x = input("Hash файла сохранения префиксного дерева не совпадает с сохранённым значением. Перестроить дерево? (Y/N)\t")
-            if x == 'Y':
+            x = input("Hash файла сохранения префиксного дерева не совпадает с сохранённым значением. Перестроить дерево? (Y/N)\t").lower()
+            if x == 'y':
                 self.build()
             else:
                 self.trieStatus = -1
