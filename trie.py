@@ -59,7 +59,7 @@ class PrefTrie:
         res = []
         i = 0
         state = datrie.State(self.trie)
-        state.walk(prefix)
+        state.walk(prefix.lower())
         it = datrie.Iterator(state)
         while it.next() and i < n:
             i += 1
@@ -70,7 +70,7 @@ class PrefTrie:
         if self.trieStatus != 1:
             print("Невозможно найти ключи: Дерево в процессе изменения параметров")
             return 0
-        return self.trie.items(prefix)
+        return self.trie.items(prefix.lower())
 
     def load(self):  # Загрузка дерева
         self.trieStatus = 0
