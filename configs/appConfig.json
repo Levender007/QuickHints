@@ -1,0 +1,5 @@
+{
+  "brandTableConf": "./configs/brandTableConfig.json",
+  "maxHintCount": 5,
+  "trieConf": "./configs/trieConfig.json"
+}
