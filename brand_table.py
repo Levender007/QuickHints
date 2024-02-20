@@ -69,7 +69,7 @@ class BrandTable:
             print("Ошибка сохранения таблицы брендов")
 
     def update(self, pid, brandName):  # pid – product ID
-        pass
+        self.table[pid] = brandName
 
 
 if __name__ == "__main__":
