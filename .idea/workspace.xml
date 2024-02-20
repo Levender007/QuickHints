@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9e614c87-8d04-450d-b4c0-9f92265b73ad" name="Changes" comment="git init">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/brand_table.py" beforeDir="false" afterPath="$PROJECT_DIR$/brand_table.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trie.py" beforeDir="false" afterPath="$PROJECT_DIR$/trie.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +18,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -45,12 +46,14 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "Python.WWH.executor": "Run",
+    "Python.app.executor": "Run",
     "Python.brand_table.executor": "Run",
     "Python.trie.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "brand__hint",
+    "git-widget-placeholder": "main__part",
     "last_opened_file_path": "C:/Users/Hasee/PycharmProjects/RIS_kurs"
   }
 }]]></component>

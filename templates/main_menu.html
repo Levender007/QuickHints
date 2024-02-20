@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Главное меню</title>
+</head>
+<body>
+<a href="{{url_for('hint')}}">Подсказка</a><br>
+<a href="{{url_for('trie')}}">Обновить префиксное дерево</a><br>
+<a href="{{url_for('brand')}}">Обновить таблицу брендов</a><br>
+<form action="" method=post>
+    <input type="submit" value="Перестроить префиксное дерево">
+    <input type="hidden" value="0" name="code">
+</form>
+<form action="" method=post>
+    <input type="submit" value="Сохранить префиксное дерево">
+    <input type="hidden" value="1" name="code">
+</form>
+<form action="" method=post>
+    <input type="submit" value="Перестроить таблицу брендов">
+    <input type="hidden" value="2" name="code">
+</form>
+<form action="" method=post>
+    <input type="submit" value="Сохранить таблицу брендов">
+    <input type="hidden" value="3" name="code">
+</form>
+</body>
+</html>
