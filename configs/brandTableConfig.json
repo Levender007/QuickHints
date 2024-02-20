@@ -1,0 +1,4 @@
+{
+  "dataset": "./datasets/attributes.csv",
+  "tablePath": "./savefiles/brandTable.csv"
+}
