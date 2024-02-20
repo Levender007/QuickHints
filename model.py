@@ -37,5 +37,5 @@ def brand_update(method, form):
     if method == 'GET':
         return render_template('brand_in.html')
     else:
-        current_app.config['trie'].update(form['pid'], form['brand'])
+        current_app.config['brandTable'].update(int(form['pid']), form['brand'])
         return redirect(url_for('menu'))
