@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Вывод подсказок</title>
+</head>
+<body>
+<a href="{{url_for('menu')}}">Меню</a><br>
+<a href="{{url_for('hint')}}">Новая подсказка</a>
+<table border="1">
+    <tr>
+        <td>Возможный запрос</td>
+        <td>Возможный бренд</td>
+    </tr>
+    {% for row in args %}
+    <tr>
+        <td>{{row[0]}}</td>
+        {% if row[1] == -1 %}
+        <td>—</td>
+        {% else %}
+        <td>{{row[1]}}</td>
+        {% endif %}
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

@@ -22,7 +22,22 @@ def hint_model(method, form):
     if method == 'GET':
         return 'hint_in.html', []
     else:
-        pass
+        start_time = time_ns()  # Debug
+        res = current_app.config['trie'].getWords(form['search'])
+
+        def key(x):
+            return x[1][0]
+
+        res.sort(key=key)
+        res = res[:current_app.config['maxHintCount']]
+
+        res2 = []
+        for item in res:
+            brand = current_app.config['brandTable'].getBrandFromPID(item[1][1])
+            res2.append([item[0], brand])
+        end_time = time_ns()  # Debug
+        print("Hint generation time:", int((end_time - start_time) / pow(10, 6)), "ms")  # Debug
+        return 'hint_out.html', res2
 
 
 def trie_update(method, form):
