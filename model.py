@@ -29,7 +29,7 @@ def trie_update(method, form):
     if method == 'GET':
         return render_template('trie_in.html')
     else:
-        current_app.config['trie'].update(form['search'], {"relevance": form['relevance'], 'product_uid': form['pid']})
+        current_app.config['trie'].update(form['search'], {"relevance": float(form['relevance']), 'product_uid': int(form['pid'])})
         return redirect(url_for('menu'))
 
 
