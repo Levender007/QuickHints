@@ -24,6 +24,8 @@ def hint_model(method, form):
     else:
         start_time = time_ns()  # Debug
         res = current_app.config['trie'].getWords(form['search'])
+        if res == 0:
+            return 'busy.html', []
 
         def key(x):
             return x[1][0]
