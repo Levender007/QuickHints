@@ -43,7 +43,7 @@ class BrandTable:
         self.save()
 
     def getBrandFromPID(self, pid):  # pid – product ID
-        pass
+        return self.table[pid]
 
     def load(self):
         print("Загрузка таблицы брендов")
@@ -77,3 +77,9 @@ if __name__ == "__main__":
     file = open("./configs/brandTableConfig.json")
     test = BrandTable(json.load(file))
     file.close()
+    test.update(10, "test")
+    print(test.table[10])
+    start = time_ns()
+    test.getBrandFromPID(179042)
+    print(time_ns() - start)
+    print("Total names:", len(test.table))
