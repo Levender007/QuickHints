@@ -43,7 +43,10 @@ class BrandTable:
         self.save()
 
     def getBrandFromPID(self, pid):  # pid – product ID
-        return self.table[pid]
+        if pid in self.table:
+            return self.table[pid]
+        else:
+            return -1
 
     def load(self):
         print("Загрузка таблицы брендов")
