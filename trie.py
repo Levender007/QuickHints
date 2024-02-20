@@ -105,8 +105,17 @@ class PrefTrie:
         self.trieStatus = 0
         print("Сохранение префиксного дерева")
 
-        self.trie.save(self.conf['triePath'])
+        try:
+            self.trie.save(self.conf['triePath'])
+        except Exception:
+            print("Ошибка сохранения префиксного дерева")
+            return
+
         x = getFileHash(self.conf['triePath'])
+        if x == -1:
+            print("Ошибка расчёта хэша файла")
+            return 
+
         try:
             with open(self.conf['hashFile'], 'w') as file:
                 file.write(x)
